@@ -17,7 +17,7 @@ Esta é uma aplicação web que permite ao usário carregar suas fotos do Google
 Antes de rodas a aplicação, você deve configurar as credentias OAuth 2.0 no Google Developers [get started guide](https://developers.google.com/photos/library/guides/get-started)
 
 1. Configure um projeto Google Developers e habilite **Google Photos Library API**.
-2. No seu projeto, configure uma credencial OAuth credentials para Web Server. Configure uma origem Javascript para `http://localhost:8080` e uma URL autorizada para redirect como `http://locahost:8080/auth/google/callback` se estiver rodando a aplicação localmente.
+2. No seu projeto, configure uma credencial OAuth credentials para Web Server. Configure uma origem Javascript para `http://127.0.0.1:8080` e uma URL autorizada para redirect como `http://127.0.0.1:8080/auth/google/callback` se estiver rodando a aplicação localmente.
 3. O console mostrará suas credencias, adicione o `Client ID` e `Client secret` no arquivo `config_copy.js` e renomei-o para `config.js`:
 
 ```
@@ -36,3 +36,5 @@ config.oAuthclientSecret = 'ADD YOUR CLIENT SECRET';
 
 6. Abra ser navegador [http://localhost:8080](http://localhost:8080)
 
+## Original
+https://github.com/googlesamples/google-photos/

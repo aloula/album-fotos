@@ -6,4 +6,4 @@ persist-mediaitemcache/
 persist-albumcache/
 .DS_STORE
 credentials.json
-config.json
+config.js
