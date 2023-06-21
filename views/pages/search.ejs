@@ -1,0 +1,260 @@
+<%- include('../partials/head') %>
+
+	<%- include('../partials/dialogs') %>
+		<section class="sample-content">
+			<h2>Pesquise suas fotos</h2>
+			<p class="subhead mdl-color-text--grey-700">Carregue suas fotos do Google Fotos para visualização
+				automática. Escolha através das opções abaixo. Tente combinar diferentes categorias e datas.</p>
+			<form id="filter">
+				<div class="filter-group">
+					<h3>Inclua essas categorias</h3>
+					<div class="mdl-grid">
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_CITYSCAPES">
+							<input type="checkbox" name="includedCategories" id="includedcategory_CITYSCAPES"
+								class="mdl-checkbox__input" value="CITYSCAPES">
+							<span class="mdl-checkbox__label">Paisagens Urbanas</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_FOOD">
+							<input type="checkbox" name="includedCategories" id="includedcategory_FOOD"
+								class="mdl-checkbox__input" value="FOOD">
+							<span class="mdl-checkbox__label">Comida</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_LANDSCAPES">
+							<input type="checkbox" name="includedCategories" id="includedcategory_LANDSCAPES"
+								class="mdl-checkbox__input" value="LANDSCAPES">
+							<span class="mdl-checkbox__label">Paisagens</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_NIGHT">
+							<input type="checkbox" name="includedCategories" id="includedcategory_NIGHT"
+								class="mdl-checkbox__input" value="NIGHT">
+							<span class="mdl-checkbox__label">Noite</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_PEOPLE">
+							<input type="checkbox" name="includedCategories" id="includedcategory_PEOPLE"
+								class="mdl-checkbox__input" value="PEOPLE">
+							<span class="mdl-checkbox__label">Pessoas</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_PERFORMANCES">
+							<input type="checkbox" name="includedCategories" id="includedcategory_PERFORMANCES"
+								class="mdl-checkbox__input" value="PERFORMANCES">
+							<span class="mdl-checkbox__label">Performances</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_PETS">
+							<input type="checkbox" name="includedCategories" id="includedcategory_PETS"
+								class="mdl-checkbox__input" value="PETS">
+							<span class="mdl-checkbox__label">Pets</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_SELFIES">
+							<input type="checkbox" name="includedCategories" id="includedcategory_SELFIES"
+								class="mdl-checkbox__input" value="SELFIES">
+							<span class="mdl-checkbox__label">Selfies</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="includedcategory_SPORT">
+							<input type="checkbox" name="includedCategories" id="includedcategory_SPORT"
+								class="mdl-checkbox__input" value="SPORT">
+							<span class="mdl-checkbox__label">Esporte</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="filter-group">
+					<h3>Exclua essas categorias</h3>
+					<div class="mdl-grid">
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_CITYSCAPES">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_CITYSCAPES"
+								class="mdl-checkbox__input" value="CITYSCAPES">
+							<span class="mdl-checkbox__label">Paisagens Urbanas</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_FOOD">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_FOOD"
+								class="mdl-checkbox__input" value="FOOD">
+							<span class="mdl-checkbox__label">Comida</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_LANDSCAPES">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_LANDSCAPES"
+								class="mdl-checkbox__input" value="LANDSCAPES">
+							<span class="mdl-checkbox__label">Paisagens</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_NIGHT">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_NIGHT"
+								class="mdl-checkbox__input" value="NIGHT">
+							<span class="mdl-checkbox__label">Noite</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_PEOPLE">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_PEOPLE"
+								class="mdl-checkbox__input" value="PEOPLE">
+							<span class="mdl-checkbox__label">Pessoas</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_PERFORMANCES">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_PERFORMANCES"
+								class="mdl-checkbox__input" value="PERFORMANCES">
+							<span class="mdl-checkbox__label">Performances</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_PETS">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_PETS"
+								class="mdl-checkbox__input" value="PETS">
+							<span class="mdl-checkbox__label">Pets</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_SELFIES">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_SELFIES"
+								class="mdl-checkbox__input" value="SELFIES">
+							<span class="mdl-checkbox__label">Selfies</span>
+						</label>
+						<label class="mdl-cell mdl-cell--4-col mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+							for="excludedcategory_SPORT">
+							<input type="checkbox" name="excludedCategories" id="excludedcategory_SPORT"
+								class="mdl-checkbox__input" value="SPORT">
+							<span class="mdl-checkbox__label">Esporte</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="filter-group">
+					<h3>Aplique filtros de Data</h3>
+					<p><label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dateFilterNone">
+							<input type="radio" id="dateFilterNone" class="mdl-radio__button" name="dateFilter"
+								value="none" checked>
+							<span class="mdl-radio__label">Sem filtro de Data</span>
+						</label>
+					</p>
+					<p>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dateFilterExact">
+							<input type="radio" id="dateFilterExact" class="mdl-radio__button" name="dateFilter"
+								value="exact">
+							<span class="mdl-radio__label">Filtro de Data</span>
+						</label>
+					</p>
+					<!-- Exact date -->
+					<div id="rowDateExact" style="display:none">
+						<h5>Data</h5>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="exactDay" name="exactDay">
+									<label class="mdl-textfield__label" for="exactDay">Dia (DD)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="exactMonth" name="exactMonth">
+									<label class="mdl-textfield__label" for="exactMonth">Mês (MM)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="exactYear" name="exactYear">
+									<label class="mdl-textfield__label" for="exactYear">Ano (AAAA)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<p>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dateFilterRange">
+							<input type="radio" id="dateFilterRange" class="mdl-radio__button" name="dateFilter"
+								value="range">
+							<span class="mdl-radio__label">Filtro por Intervalo de Datas</span>
+						</label>
+					</p>
+					<div id="rowDateRange" style="display:none">
+						<h4>Data Inicial</h4>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="startDay" name="startDay">
+									<label class="mdl-textfield__label" for="startDay">Dia (AA)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="startMonth" name="startMonth">
+									<label class="mdl-textfield__label" for="startMonth">Mês (MM)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="startYear" name="startYear">
+									<label class="mdl-textfield__label" for="startYear">Ano (AAAA)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+						</div>
+
+						<h4>Data Final</h4>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="endDay" name="endDay">
+									<label class="mdl-textfield__label" for="endDay">Dia (DD)</label>
+									<span class="mdl-textfield__error">Valor não é um número!!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="endMonth" name="endMonth">
+									<label class="mdl-textfield__label" for="endMonth">Mês (MM)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--4-col">
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+										id="endYear" name="endYear">
+									<label class="mdl-textfield__label" for="endYear">Ano (AAAA)</label>
+									<span class="mdl-textfield__error">Valor não é um número!</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Accent-colored raised button with ripple -->
+				<div class="floating-button">
+					<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+						<i class="material-icons">search</i>
+						<span class="float-btn-label">Pesquise</span>
+					</button>
+				</div>
+
+
+
+
+			</form>
+		</section>
+
+		<%- include('../partials/js') %>
+			<script src="/js/search.js"></script>
+
+			<%- include('../partials/footer') %>
